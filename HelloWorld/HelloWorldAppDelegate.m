@@ -2,7 +2,7 @@
 //  HelloWorldAppDelegate.m
 //  HelloWorld
 //
-//  Created by Vincent Siao on 8/1/13.
+//  Created by Vincent Meow on 8/1/13.
 //  Copyright (c) 2013 Vincent Siao. All rights reserved.
 //
 
