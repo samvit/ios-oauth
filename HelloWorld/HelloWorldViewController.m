@@ -43,6 +43,11 @@
     */
 }
 
+//remove this later -- its just to let us get to the next scene
+- (IBAction)showList:(id)sender {
+    NSLog(@"SHOW ME THE LIST MOTHERFUCKER");
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
     if (theTextField == self.textField) {
         [theTextField resignFirstResponder];
