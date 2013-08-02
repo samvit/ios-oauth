@@ -13,8 +13,8 @@
 
 + (void)initialize
 {
-    [[NXOAuth2AccountStore sharedStore] setClientID:@"67108872"
-                                             secret:@"5d1c0daa5c719cadeaf6370694c450c0"
+    [[NXOAuth2AccountStore sharedStore] setClientID:@"138248"
+                                             secret:@"984ded283a4d0bfdb2b563a6d1dfcaf5"
                                    authorizationURL:[NSURL URLWithString:@"https://localhost.org:8180/-/oauth_authorize"]
                                            tokenURL:[NSURL URLWithString:@"https://localhost.org:8180/-/oauth_token"]
                                         redirectURL:[NSURL URLWithString:@"ioasana://app/oauth"]
