@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4267DA517AB9D6300D2A951 /* libOAuth2Client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4741F5B17AB7DAC00936AD7 /* libOAuth2Client.a */; };
+		C4267DA717AB9D6700D2A951 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4267DA617AB9D6700D2A951 /* Security.framework */; };
 		C4741F0717AB34D500936AD7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4741F0617AB34D500936AD7 /* UIKit.framework */; };
 		C4741F0917AB34D500936AD7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4741F0817AB34D500936AD7 /* Foundation.framework */; };
 		C4741F0B17AB34D500936AD7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4741F0A17AB34D500936AD7 /* CoreGraphics.framework */; };
@@ -28,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C4267DA317AB9D5E00D2A951 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4741F5317AB7DAC00936AD7 /* OAuth2Client.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = OAuth2Client;
+		};
 		C4741F3117AB34D600936AD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C4741EFB17AB34D500936AD7 /* Project object */;
@@ -59,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4267DA617AB9D6700D2A951 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C4741F0317AB34D500936AD7 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4741F0617AB34D500936AD7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C4741F0817AB34D500936AD7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4267DA717AB9D6700D2A951 /* Security.framework in Frameworks */,
+				C4267DA517AB9D6300D2A951 /* libOAuth2Client.a in Frameworks */,
 				C4741F0717AB34D500936AD7 /* UIKit.framework in Frameworks */,
 				C4741F0917AB34D500936AD7 /* Foundation.framework in Frameworks */,
 				C4741F0B17AB34D500936AD7 /* CoreGraphics.framework in Frameworks */,
@@ -113,6 +125,7 @@
 		C4741EFA17AB34D500936AD7 = {
 			isa = PBXGroup;
 			children = (
+				C4267DA617AB9D6700D2A951 /* Security.framework */,
 				C4741F5317AB7DAC00936AD7 /* OAuth2Client.xcodeproj */,
 				C4741F0C17AB34D500936AD7 /* HelloWorld */,
 				C4741F3317AB34D600936AD7 /* HelloWorldTests */,
@@ -211,6 +224,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C4267DA417AB9D5E00D2A951 /* PBXTargetDependency */,
 			);
 			name = HelloWorld;
 			productName = HelloWorld;
@@ -350,6 +364,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C4267DA417AB9D5E00D2A951 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuth2Client;
+			targetProxy = C4267DA317AB9D5E00D2A951 /* PBXContainerItemProxy */;
+		};
 		C4741F3217AB34D600936AD7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C4741F0217AB34D500936AD7 /* HelloWorld */;
@@ -461,9 +480,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloWorld/HelloWorld-Prefix.pch";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$PROJECT_DIR/OAuth2Client/**";
 				INFOPLIST_FILE = "HelloWorld/HelloWorld-Info.plist";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -475,9 +494,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloWorld/HelloWorld-Prefix.pch";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$PROJECT_DIR/OAuth2Client/**";
 				INFOPLIST_FILE = "HelloWorld/HelloWorld-Info.plist";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -547,6 +566,7 @@
 				C4741F4017AB34D600936AD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4741F4117AB34D600936AD7 /* Build configuration list for PBXNativeTarget "HelloWorldTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +575,7 @@
 				C4741F4317AB34D600936AD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

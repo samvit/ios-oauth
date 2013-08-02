@@ -7,8 +7,19 @@
 //
 
 #import "HelloWorldAppDelegate.h"
+#import "NXOAuth2.h"
 
 @implementation HelloWorldAppDelegate
+
++ (void)initialize
+{
+    [[NXOAuth2AccountStore sharedStore] setClientID:@"67108872"
+                                             secret:@"5d1c0daa5c719cadeaf6370694c450c0"
+                                   authorizationURL:[NSURL URLWithString:@"https://localhost.org:8180/-/oauth_authorize"]
+                                           tokenURL:[NSURL URLWithString:@"https://localhost.org:8180/-/oauth_token"]
+                                        redirectURL:[NSURL URLWithString:@"ioasana://app/oauth"]
+                                     forAccountType:@"Asana"];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
