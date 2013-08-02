@@ -7,6 +7,7 @@
 //
 
 #import "HelloWorldViewController.h"
+#import "NXOAuth2.h"
 
 @interface HelloWorldViewController ()
 
@@ -28,7 +29,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)changeGreeting:(id)sender {
+- (IBAction)login:(id)sender {
+    [[NXOAuth2AccountStore sharedStore] requestAccessToAccountWithType:@"Asana"];
+    /*
     self.userName = self.textField.text;
     
     NSString *nameString = self.userName;
@@ -37,6 +40,7 @@
     }
     NSString *greeting = [[NSString alloc] initWithFormat:@"Hello, %@!", nameString];
     self.label.text = greeting;
+    */
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
